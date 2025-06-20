@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Yichen Jia / Personal Website"
+title                    : "Yichen Jia's Personal Website"
 title_separator          : "-"
 name                     : &name "Yichen Jia"
 description              : &description "A PhD student/researcher focusing on statistics in modern Automatic Speech Recognition (ASR) framwork"
@@ -22,7 +22,7 @@ repository               : "windskylionheart1023/windskylionheart1023.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Yichen Jia"
   pronouns         : # example: "she/her"  
   bio              : "A PhD student/researcher focusing on statistics in modern Automatic Speech Recognition (ASR) framwork"
   location         : "Leuven, Belgium"
