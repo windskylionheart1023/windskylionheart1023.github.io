@@ -19,5 +19,43 @@
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
+    <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch to dark theme" title="Switch to dark theme">
+      <i class="fa-solid fa-moon theme-toggle__icon--moon" aria-hidden="true"></i>
+      <i class="fa-solid fa-sun theme-toggle__icon--sun" aria-hidden="true"></i>
+    </button>
   </div>
 </div>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById('theme-toggle');
+    var media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+    function apply(theme) {
+      root.setAttribute('data-theme', theme);
+      var next = theme === 'dark' ? 'light' : 'dark';
+      btn.setAttribute('aria-label', 'Switch to ' + next + ' theme');
+      btn.setAttribute('title', 'Switch to ' + next + ' theme');
+    }
+
+    apply(root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
+
+    btn.addEventListener('click', function () {
+      var theme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      apply(theme);
+      try { localStorage.setItem('theme', theme); } catch (e) {}
+    });
+
+    // Follow the system setting until the visitor picks a theme.
+    if (media) {
+      var onChange = function (e) {
+        var saved = null;
+        try { saved = localStorage.getItem('theme'); } catch (err) {}
+        if (saved !== 'light' && saved !== 'dark') { apply(e.matches ? 'dark' : 'light'); }
+      };
+      if (media.addEventListener) { media.addEventListener('change', onChange); }
+      else if (media.addListener) { media.addListener(onChange); }
+    }
+  })();
+</script>

@@ -1,0 +1,273 @@
+/* ==========================================================================
+   THEME TOGGLE + DARK THEME
+   The theme is set on <html data-theme="light|dark"> by the script in
+   _includes/head/custom.html (before first paint) and toggled by the
+   button in _includes/masthead.html.
+   ========================================================================== */
+
+/* Toggle button */
+
+.masthead__inner-wrap {
+  display: flex;
+  align-items: center;
+
+  &:before,
+  &:after {
+    display: none; /* clearfix pseudo-elements are not needed with flex */
+  }
+}
+
+.masthead__menu {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.theme-toggle {
+  flex: 0 0 auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 0.75rem;
+  padding: 0;
+  border: 1px solid $border-color;
+  border-radius: 50%;
+  background: transparent;
+  color: $masthead-link-color;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+
+  &:hover {
+    color: $masthead-link-color-hover;
+    border-color: $masthead-link-color;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $link-color;
+    outline-offset: 2px;
+  }
+
+  .theme-toggle__icon--sun {
+    display: none;
+  }
+}
+
+/* Dark theme colours */
+
+$dark-bg            : #1b1d21;
+$dark-surface       : #24272c;
+$dark-surface-2     : #2d3137;
+$dark-text          : #d6d9dd;
+$dark-text-muted    : #9ba1a8;
+$dark-border        : #383c43;
+$dark-link          : #6ec6e0;
+$dark-link-hover    : #a3dcee;
+$dark-link-visited  : #8fb8d8;
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  background-color: $dark-bg;
+
+  body {
+    background-color: $dark-bg;
+    color: $dark-text;
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  strong, b {
+    color: #eceef0;
+  }
+
+  a {
+    color: $dark-link;
+
+    &:visited {
+      color: $dark-link-visited;
+    }
+
+    &:hover,
+    &:active {
+      color: $dark-link-hover;
+    }
+  }
+
+  hr {
+    border-top-color: $dark-border;
+  }
+
+  /* masthead and menu */
+  .masthead {
+    background: $dark-bg;
+    border-bottom-color: $dark-border;
+  }
+
+  .greedy-nav {
+    background: $dark-bg;
+
+    a {
+      color: $dark-text-muted;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    .visible-links li:first-child a {
+      color: $dark-text;
+    }
+
+    .hidden-links {
+      background: $dark-surface;
+      border-color: $dark-border;
+      box-shadow: 0 0 10px rgba(#000, 0.6);
+
+      a:hover {
+        color: #fff;
+        background: $dark-surface-2;
+      }
+
+      &:before {
+        border-color: $dark-border transparent;
+      }
+
+      &:after {
+        border-color: $dark-surface transparent;
+      }
+    }
+  }
+
+  .theme-toggle {
+    border-color: $dark-border;
+    color: #f5c96b;
+
+    &:hover {
+      border-color: $dark-text-muted;
+      color: #ffd98a;
+    }
+
+    .theme-toggle__icon--moon {
+      display: none;
+    }
+
+    .theme-toggle__icon--sun {
+      display: inline-block;
+    }
+  }
+
+  /* sidebar (author profile) */
+  .author__urls {
+    border-color: $dark-border;
+
+    background: $dark-surface;
+
+    @include breakpoint($large) {
+      background: transparent;
+    }
+
+    &:before {
+      border-color: $dark-border transparent;
+    }
+
+    &:after {
+      border-color: $dark-surface transparent;
+    }
+  }
+
+  .author__urls-wrapper button {
+    background: $dark-surface-2;
+    color: $dark-text;
+    border-color: $dark-border;
+  }
+
+  .author__name {
+    color: $dark-text;
+  }
+
+  .author__avatar img {
+    border-color: $dark-border;
+  }
+
+  /* page content */
+  .page__meta,
+  .page__date,
+  .archive__item-excerpt,
+  .page__taxonomy,
+  figcaption {
+    color: $dark-text-muted;
+  }
+
+  .archive__item-title a,
+  .page__title a {
+    color: $dark-text;
+
+    &:hover {
+      color: $dark-link-hover;
+    }
+  }
+
+  blockquote {
+    border-left-color: $dark-border;
+    color: $dark-text-muted;
+  }
+
+  code,
+  pre,
+  .highlight,
+  div.highlighter-rouge,
+  figure.highlight {
+    background: $dark-surface;
+    color: $dark-text;
+  }
+
+  table {
+    border-color: $dark-border;
+  }
+
+  th,
+  thead {
+    background-color: $dark-surface;
+  }
+
+  th,
+  td {
+    border-color: $dark-border;
+  }
+
+  .notice,
+  .notice--primary,
+  .notice--info,
+  .notice--warning,
+  .notice--success,
+  .notice--danger {
+    background-color: $dark-surface;
+    color: $dark-text;
+  }
+
+  input,
+  textarea,
+  select {
+    background-color: $dark-surface;
+    color: $dark-text;
+    border-color: $dark-border;
+  }
+
+  /* footer */
+  .page__footer {
+    background-color: $dark-surface;
+    border-top-color: $dark-border;
+    color: $dark-text-muted;
+
+    a {
+      color: $dark-text-muted;
+
+      &:hover {
+        color: $dark-text;
+      }
+    }
+  }
+
+  .page__footer-follow .social-icons .svg-inline--fa,
+  .page__footer-follow .social-icons i {
+    color: inherit;
+  }
+}
