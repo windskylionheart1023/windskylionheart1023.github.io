@@ -11,54 +11,34 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* PhD in Engineering Science, KU Leuven, Belgium, 2024 – present
+  * ESAT-PSI (Processing Speech and Images), supervisor: Prof. Hugo Van hamme
+  * Topic: streaming automatic speech recognition
+* Master of Statistics and Data Science, KU Leuven, Belgium
+* Bachelor of Financial Engineering, Sichuan University, China
 
-Work experience
+Research interests
 ======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Streaming ASR with Conformer-based models (chunk-based attention, lookahead control)
+* Confidence estimation and calibration for ASR
+* Speech large language models
 
 Publications
 ======
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
+
 Teaching
 ======
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Service and leadership
+
+Supervision
 ======
-* Currently signed in to 43 different slack teams
+* Daily supervisor of Master of Artificial Intelligence thesis students, KU Leuven (2026 – 2027)
+
+Service
+======
+* Reviewer, ICASSP 2027 (Speech and Language Processing)
