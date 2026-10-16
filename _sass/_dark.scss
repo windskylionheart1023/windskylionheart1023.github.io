@@ -271,3 +271,40 @@ html[data-theme="dark"] {
     color: inherit;
   }
 }
+
+/* "Open to internships" call-out on the About page */
+
+.open-to {
+  margin: 0 0 2em;
+  padding: 1em 1.25em;
+  border: 1px solid mix(#fff, $info-color, 55%);
+  border-left: 6px solid $info-color;
+  border-radius: $border-radius;
+  background-color: mix(#fff, $info-color, 90%);
+
+  p {
+    margin: 0.4em 0;
+  }
+
+  .open-to__title {
+    margin-top: 0;
+    font-family: $header-font-family;
+    font-size: $type-size-4;
+    font-weight: bold;
+    color: mix(#000, $info-color, 35%);
+
+    i {
+      margin-right: 0.35em;
+    }
+  }
+}
+
+html[data-theme="dark"] .open-to {
+  border-color: #2f5966;
+  border-left-color: $dark-link;
+  background-color: #1f3038;
+
+  .open-to__title {
+    color: $dark-link-hover;
+  }
+}
