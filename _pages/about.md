@@ -19,7 +19,7 @@ I am a PhD researcher at the [PSI group](https://www.esat.kuleuven.be/psi) (Proc
 
 My research is on automatic speech recognition (ASR). My main topic is streaming ASR with Conformer-based models: how a model can recognize speech with low latency and still stay accurate. I work on chunk-based attention, lookahead control, and confidence estimation, so that a streaming model can decide when its output is reliable. I am also starting work on speech large language models (speech LLMs), in particular how speech representations align with the text-token space of the LLM.
 
-I am always open to a coffee chat about speech, ASR, or research in general.
+I am always open to a coffee chat about speech, ASR, or research in general. If there are any opportunities for research collaboration, please feel free to contact me at [yichen.jia@kuleuven.be](mailto:yichen.jia@kuleuven.be).
 
 News
 ======
