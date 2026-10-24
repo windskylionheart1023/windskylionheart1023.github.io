@@ -41,4 +41,4 @@ Supervision
 
 Service
 ======
-* Reviewer, ICASSP 2027 (Speech and Language Processing)
+* Reviewer, IEEE ICASSP 2027 (Speech and Language Processing track)

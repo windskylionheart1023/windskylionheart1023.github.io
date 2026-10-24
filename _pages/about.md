@@ -34,3 +34,7 @@ Education
 * **PhD in Engineering Science**, KU Leuven, Belgium (2024 – present)
 * **Master of Statistics and Data Science**, KU Leuven, Belgium
 * **Bachelor of Financial Engineering**, Sichuan University, China
+
+Service
+======
+* **Reviewer**, IEEE ICASSP 2027 (Speech and Language Processing track)
